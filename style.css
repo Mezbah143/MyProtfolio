@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-/* Body styles */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-/* Header styles */
+
 header {
     background-color: #16b89d; 
     padding: 1rem;
@@ -45,8 +45,9 @@ header {
     color: #fff; /* Text color */
     margin-right: 1rem;
     transition: .5s ease;
+    font-weight: bold;
 }
-.navbar-nav a :hover{
+.navbar-list a :hover{
     background-color: #000;
 }
 
