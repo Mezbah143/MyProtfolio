@@ -35,74 +35,27 @@ header {
     color: #fff; /* Text color */
 }
 
-.navbar-toggler {
-    display: none; /* Hide toggler by default */
-}
-
 .navbar-nav {
     list-style: none; /* Remove default list styles */
-    display: flex; /* Use flexbox for navigation items */
+    display: flex;
+    gap: 3rem; /* Use flexbox for navigation items */
 }
 
 .navbar-nav a {
     text-decoration: none; /* Remove default underline */
     color: #fff; /* Text color */
-    margin-right: 1rem; /* Add margin between navigation items */
-}
-
-/* Style for the home button */
-.home-btn {
-    padding: 0.5rem 1rem; /* Button padding */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Button border radius */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-/* Navbar collapse styles for small screens */
-@media (max-width: 768px) {
-    .navbar-nav {
-        display: none; /* Hide navigation items by default */
-        flex-direction: column; /* Change flex direction to column */
-        background-color: #457efa; /* Background color for collapsed navbar */
-        position: absolute; /* Position navbar absolutely */
-        top: 100%; /* Position navbar below header */
-        left: 0; /* Align navbar to the left */
-        width: 100%; /* Set navbar width to 100% */
-        padding: 1rem 0; /* Add padding to navbar */
-    }
-
-    .navbar-nav a {
-        display: block; /* Display navigation items as block */
-        padding: 0.5rem 1rem; /* Add padding to navigation items */
-        border-bottom: 1px solid #fff; /* Add border between navigation items */
-    }
-    .navbar-nav a:hover {
-        color: #457efa; /* Change text color on hover */
-        background-color: #fff; /* Change background color on hover */
-        border-radius: 5px; /* Add border radius on hover */
-        transition: all 0.3s ease; /* Add smooth transition */
-    }
-    
-    /* Home button hover effect */
-    .home-btn:hover {
-        background-color: #3a63c4; /* Change background color on hover */
-        transition: background-color 0.3s ease; /* Add smooth transition */
-    }
-
-    .navbar-toggler {
-        display: block; /* Display toggler for small screens */
-        cursor: pointer; /* Change cursor on hover */
-    }
-
-    .collapsed {
-        display: flex; /* Show collapsed navbar when toggler is clicked */
-    }
+    margin-right: 1rem;
 }
 
 /* Main styles */
 main {
     padding: 2rem;
 }
+
+
+
+
+
 /* Section styles */
 #home {
     background-color: #f8f9fa; /* Background color */
@@ -163,83 +116,143 @@ main {
 }
 
 
-
-
-/* Section styles */
-section {
-    margin-bottom: 2rem;
+/* Style for the section */
+#about {
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-/* About section styles */
+/* Style for the heading */
 .display-about {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.img-about {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Button styles */
-.btn {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border: 1px solid #457efa;
+.text-primary {
     color: #457efa;
+}
+
+/* Style for the image */
+.img-about {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the text content */
+#about .col-lg-7 {
+    padding-left: 30px;
+}
+
+#about h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#about .row.mb-3 h6 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#about .row.mb-3 h6 span {
+    font-weight: normal;
+}
+
+/* Style for buttons */
+#about .btn {
+    padding: 10px 20px;
     border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+#about .btn.blue {
     background-color: #457efa;
     color: #fff;
 }
 
-/* Portfolio section styles */
-.portfolio-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+#about .btn.blue:hover {
+    background-color: #3454d1;
 }
 
-.project {
-    margin-bottom: 1rem;
+#about .btn.btn-outline-primary {
+    color: #457efa;
+    border: 1px solid #457efa;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
+#about .btn.btn-outline-primary:hover {
+    background-color: #457efa;
+    color: #fff;
 }
 
-/* Contact section styles */
-#contact-form {
-    margin-top: 2rem;
+
+
+/* Style for the whole section */
+#contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-#contact-form label {
+/* Style for the form */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
 }
 
-#contact-form input,
-#contact-form textarea {
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#contact-form button {
-    padding: 0.5rem 1rem;
-    border: none;
+#contact form button[type="submit"] {
     background-color: #457efa;
     color: #fff;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#contact-form button:hover {
-    background-color: #3a63c4;
+#contact form button[type="submit"]:hover {
+    background-color: #3454d1;
 }
+
+/* Style for the contact information */
+#contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#contact-info h2 {
+    margin-bottom: 20px;
+}
+
+#contact-info p {
+    margin-bottom: 10px;
+}
+
 
 /* Footer styles */
 footer {
