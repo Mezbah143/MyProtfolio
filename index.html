@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="main-page">
+                <h1 class="logo"><span class="text-primary">My</span>Folio</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                    <a href="#home" class="home">Home</a>
+                    <a href="#about" class="about">About</a>
+                    <a href="#project" class="project">Project</a>
+                    <a href="#portfolio" class="portfolio">Portfolio</a>
+                    <a href="#contact" class="contact">Contact</a>
+                </div>
+                <Div>
+                <a href="" class="home-btn" style="background-color:#457efa; color: #ffffff;">Hire Me</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <div class="container-flex" id="home" style="min-height: 100vh;">
+                <div class="container">
+                    <div class="row align-items-center">
+        
+                        <div class="col-lg-7 text-center text-lg-left">
+                            <h3 class="text">Hello, I'm Mezbah </h3>
+                            <h1 class="display">Alaxe Smith</h1>
+                            <h1 class="typed-text"></h1>
+                            <div class="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+                            
+                        </div>
+                        <div class="about-img">
+                            <img class="img" src="./protfolio.png" alt="my photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid" id="about">
+                <div class="container">
+                    <div class="position">
+                        <h1 class="display-about">About</h1>
+                        <h1 class="text-primary">About Me</h1>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 pb-4 pb-lg-0">
+                            <img class="img-about" src="img/about.jpg" alt="about pic">
+                        </div>
+                        <div class="col-lg-7">
+                            <h3 class="mb-4">UI/UX Designer & Web Developer</h3>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam dolor justo et dolor dolor dolor</p>
+                            <div class="row mb-3">
+                                <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Mezbah UDdin</span></h6></div>
+                                <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">10 December 1999</span></h6></div>
+                                <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Associet Degree</span></h6></div>
+                                <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">No</span></h6></div>
+                                <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+010</span></h6></div>
+                                <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">info@example.com</span></h6></div>
+                                <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Nam-gu, Ulsan, South Korea </span></h6></div>
+                                <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
+                            </div>
+                            <a href="" class="btn blue btn-outline-primary mr-4">Hire Me</a>
+                            <a href="" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="project-details">
+            <h2>Project Details</h2>
+            <img src="project_image.jpg" alt="Project Image">
+            <h3>Description:</h3>
+            <p>This is a brief description of the project.</p>
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>Technology 1</li>
+                <li>Technology 2</li>
+                <li>Technology 3</li>
+                <!-- Add more technologies as needed -->
+            </ul>
+            <h3>Features:</h3>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <!-- Add more features as needed -->
+            </ul>
+            <h3>Link:</h3>
+            <p><a href="project_link">Project Link</a></p>
+        </section>
+
+    
+
+
+        <section class="portfolio-section">
+            <h2>Web Development Projects</h2>
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <h2>Project 1</h2>
+                <p>Description of Project 1</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <h2>Project 2</h2>
+                <p>Description of Project 2</p>
+                <a href="#">View Project</a>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+
+
+        <section id="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+          <div id="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> example@example.com</p>
+            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+
+          </div>
+        </section>
+        
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
+</body>
+</html>

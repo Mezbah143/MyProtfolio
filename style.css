@@ -1,0 +1,250 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+/* Header styles */
+header {
+    background-color: #457efa; /* Background color */
+    padding: 1rem; /* Padding around the header */
+}
+
+.navbar {
+    display: flex; /* Use flexbox for navigation */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.main-page {
+    text-decoration: none; /* Remove default underline */
+    color: #fff; /* Text color */
+}
+
+.logo {
+    font-size: 1.5rem; /* Logo font size */
+    font-weight: bold; /* Logo font weight */
+    color: #fff; /* Text color */
+}
+
+.navbar-toggler {
+    display: none; /* Hide toggler by default */
+}
+
+.navbar-nav {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for navigation items */
+}
+
+.navbar-nav a {
+    text-decoration: none; /* Remove default underline */
+    color: #fff; /* Text color */
+    margin-right: 1rem; /* Add margin between navigation items */
+}
+
+/* Style for the home button */
+.home-btn {
+    padding: 0.5rem 1rem; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Button border radius */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Navbar collapse styles for small screens */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none; /* Hide navigation items by default */
+        flex-direction: column; /* Change flex direction to column */
+        background-color: #457efa; /* Background color for collapsed navbar */
+        position: absolute; /* Position navbar absolutely */
+        top: 100%; /* Position navbar below header */
+        left: 0; /* Align navbar to the left */
+        width: 100%; /* Set navbar width to 100% */
+        padding: 1rem 0; /* Add padding to navbar */
+    }
+
+    .navbar-nav a {
+        display: block; /* Display navigation items as block */
+        padding: 0.5rem 1rem; /* Add padding to navigation items */
+        border-bottom: 1px solid #fff; /* Add border between navigation items */
+    }
+    .navbar-nav a:hover {
+        color: #457efa; /* Change text color on hover */
+        background-color: #fff; /* Change background color on hover */
+        border-radius: 5px; /* Add border radius on hover */
+        transition: all 0.3s ease; /* Add smooth transition */
+    }
+    
+    /* Home button hover effect */
+    .home-btn:hover {
+        background-color: #3a63c4; /* Change background color on hover */
+        transition: background-color 0.3s ease; /* Add smooth transition */
+    }
+
+    .navbar-toggler {
+        display: block; /* Display toggler for small screens */
+        cursor: pointer; /* Change cursor on hover */
+    }
+
+    .collapsed {
+        display: flex; /* Show collapsed navbar when toggler is clicked */
+    }
+}
+
+/* Main styles */
+main {
+    padding: 2rem;
+}
+/* Section styles */
+#home {
+    background-color: #f8f9fa; /* Background color */
+    padding: 4rem 0; /* Padding around the content */
+}
+
+.container-flex {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Set minimum height to full viewport height */
+}
+
+.container {
+    max-width: 1200px; /* Set maximum width for content */
+    width: 100%; /* Ensure content takes full width */
+    padding: 0 1rem; /* Add padding on sides */
+}
+
+.row {
+    display: flex; /* Use flexbox for row layout */
+    flex-wrap: wrap; /* Allow items to wrap to new line if needed */
+}
+
+.col-lg-7 {
+    flex: 0 0 50%; /* Take up 50% of the available width */
+    padding: 0 2rem; /* Add padding on sides */
+}
+
+.about-img {
+    flex: 0 0 50%; /* Take up 50% of the available width */
+    display: flex; /* Use flexbox for image layout */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+.img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Allow image to scale proportionally */
+    border-radius: 10px; /* Add rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.text {
+    text-align: center; /* Center text horizontally */
+    margin-bottom: 2rem; /* Add margin at the bottom */
+}
+
+.display {
+    font-size: 3rem; /* Increase font size */
+    font-weight: bold; /* Add bold font weight */
+    color: #333; /* Text color */
+}
+
+.typed-text {
+    font-size: 1.2rem; /* Set font size */
+    color: #666; /* Text color */
+}
+
+
+
+
+/* Section styles */
+section {
+    margin-bottom: 2rem;
+}
+
+/* About section styles */
+.display-about {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.img-about {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Button styles */
+.btn {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #457efa;
+    color: #457efa;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #457efa;
+    color: #fff;
+}
+
+/* Portfolio section styles */
+.portfolio-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project {
+    margin-bottom: 1rem;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact section styles */
+#contact-form {
+    margin-top: 2rem;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#contact-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #457efa;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #3a63c4;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
