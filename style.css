@@ -13,25 +13,25 @@ body {
 
 /* Header styles */
 header {
-    background-color: #16b89d; /* Background color */
-    padding: 1rem; /* Padding around the header */
+    background-color: #16b89d; 
+    padding: 1rem;
 }
 
 .navbar {
-    display: flex; /* Use flexbox for navigation */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center items vertically */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
 }
 
 .main-page {
     text-decoration: none; 
-    color: #fff; /* Text color */
+    color: #fff; 
 }
 
 .logo {
     font-size: 1.5rem; 
     font-weight: bold; 
-    color: #fff;
+    color: #a83636;
 }
 
 .navbar-nav {
@@ -44,6 +44,10 @@ header {
     text-decoration: none; 
     color: #fff; /* Text color */
     margin-right: 1rem;
+    transition: .5s ease;
+}
+.navbar-nav a :hover{
+    background-color: #000;
 }
 
 /* Main styles */
@@ -81,50 +85,70 @@ main {
     flex-wrap: wrap;
 }
 
-.col-lg-7 {
+.home-text{
     flex: 0 0 50%;
-    padding: 0 2rem; 
-}
-
-.about-img {
-    flex: 0 0 50%;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    padding-top: 30px; 
+    margin-top: 60px;
 }
 
 .img {
     max-width: 100%; 
     height: auto; 
     border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .text {
-    text-align: center; /* Center text horizontally */
-    margin-bottom: 2rem;
-    color: wheat; /* Add margin at the bottom */
+     
+    font-weight: bold;  
+}
+.name-color{
+    color: yellow;
 }
 
 .display {
-    font-size: 3rem; 
-    font-weight: bold; /* Add bold font weight */
-    color: #f8f8f8; /* Text color */
+    font-weight: bold; 
+    inline-size: auto;
+    
 }
 
 .typed-text {
-    font-size: 1.2rem; /* Set font size */
-    color: #666; /* Text color */
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    font-family: italic; /* Set font size */
+    
+}
+.cn{
+    width: 150px;
+    height: 30px;
+    background: #15d582;
+    border: none;
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .5s ease;
+}
+
+.cn:hover{
+    background-color: #aba6a6;
 }
 
 
 /* Style for the section */
+/* Style for the section */
 #about {
     padding: 50px 0;
-    background-color: #f9f9f9;
 }
 
-/* Style for the heading */
+/* Style for the headings */
 .display-about {
     font-size: 36px;
     font-weight: bold;
@@ -137,19 +161,21 @@ main {
 
 /* Style for the image */
 .img-about {
-    width: 100%;
+    width: 300px;
     max-width: 400px;
-    display: block;
     margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Style for the text content */
-#about .col-lg-7 {
-    padding-left: 30px;
-}
+#page-deco {
+    display: flex;
+    gap: 2rem;
 
+}
+.about-text{
+    margin-top: 50px;
+}
 #about h3 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -159,16 +185,24 @@ main {
     font-size: 16px;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#about .row.mb-3 h6 {
+/* Style for the information */
+.information {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
     font-size: 14px;
-    margin-bottom: 10px;
 }
 
-#about .row.mb-3 h6 span {
-    font-weight: normal;
+.information > div {
+    padding: 10px;
+}
+
+.text-secondary {
+    color: #666;
 }
 
 /* Style for buttons */
@@ -177,11 +211,20 @@ main {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 30px;
+}
+.about-btn{
+    text-align: center;
+    margin-top: 30px;
+    
 }
 
 #about .btn.blue {
-    background-color: #457efa;
+    background-color: #fa4545;
     color: #fff;
+    font-weight: bolder;
+    font-size: large;
 }
 
 #about .btn.blue:hover {
@@ -200,16 +243,26 @@ main {
 
 
 
-/* Style for the whole section */
+/* Style for the contact section */
 #contact {
     padding: 50px 0;
     background-color: #f9f9f9;
 }
+.contact-header{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 /* Style for the form */
 #contact form {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 30px;
+
 }
 
 #contact form label {
