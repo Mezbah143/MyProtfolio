@@ -310,6 +310,68 @@ main {
     margin-bottom: 10px;
 }
 
+/* Project Section */
+#project {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-info {
+    padding: 40px;
+}
+
+.project-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.project-image {
+    max-width: 50%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
 
 /* Footer styles */
 footer {
