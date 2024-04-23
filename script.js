@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
    
+
+
+
     document.addEventListener('click', function (event) {
         const isClickInsideNavbar = navbarCollapse.contains(event.target);
         const isClickInsideNavbarToggler = navbarToggler.contains(event.target);
