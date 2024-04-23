@@ -13,7 +13,7 @@ body {
 
 
 header {
-    background-color: #011f47; 
+    background-color: #46586f; 
     padding: 1rem;
 }
 
@@ -31,25 +31,29 @@ header {
 .logo {
     font-size: 1.5rem; 
     font-weight: bold; 
-    color: #a83636;
+    color: #f90909;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navbar-nav {
     list-style: none; 
     display: flex;
     gap: 3rem; 
+    margin-right: 50px;
 }
 
 .navbar-nav a {
     text-decoration: none; 
     color: #fff; /* Text color */
-    margin-right: 1rem;
+    margin-right: 3rem;
     transition: .5s ease;
     font-weight: bold;
 }
-.navbar-list a :hover{
-    background-color: #000;
+.navbar-nav a:hover{
+    color: #f40b0b;
+    transition: .5s ease;
 }
+
 
 /* Main styles */
 main {
@@ -63,8 +67,9 @@ main {
 /* Section styles */
 #home {
     background-color: #7e711c; 
-    padding: 4rem 0; 
+    padding: 2rem 0; 
     color: white;
+    border-radius: 5px;
 
 }
 
@@ -90,6 +95,7 @@ main {
     flex: 0 0 50%;
     padding-top: 30px; 
     margin-top: 60px;
+    font-family: "Dancing Script", cursive;;
 }
 
 .img {
@@ -121,7 +127,7 @@ main {
 .cn{
     width: 150px;
     height: 30px;
-    background: #15d582;
+    background: #09f448;
     border: none;
     margin-top: 40px;
     margin-left: 100px;
@@ -139,7 +145,7 @@ main {
 }
 
 .cn:hover{
-    background-color: #aba6a6;
+    background-color: #f00b0b;
 }
 
 
@@ -245,7 +251,6 @@ main {
 
 /* Style for the contact section */
 #contact {
-    
     padding: 50px 0;
     background-color: #f9f9f9;
 }
@@ -261,7 +266,7 @@ main {
 
 /* Style for the form */
 #contact form {
-    
+    margin-left: 30px;
     max-width: 300px;
     margin-top: 30px;
 
@@ -270,6 +275,7 @@ main {
 #contact form label {
     display: block;
     margin-bottom: 5px;
+    
 }
 
 #contact form input[type="text"],
@@ -278,7 +284,7 @@ main {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ac6969;
     border-radius: 5px;
 }
 
@@ -308,18 +314,20 @@ main {
 
 #contact-info p {
     margin-bottom: 10px;
+    
 }
 
 /* Project Section */
 #project {
-    padding: 80px 0;
-    background-color: #f9f9f9;
+    padding: 50px 0;
+    background-color: #540f0f;
+    border-radius: 5px;
 }
 
 .section-title {
     text-align: center;
     font-size: 36px;
-    color: #333;
+    color: #f7f1f1;
     margin-bottom: 40px;
 }
 
@@ -340,28 +348,30 @@ main {
 
 .project-title {
     font-size: 24px;
-    color: #333;
+    color: #276512;
     margin-bottom: 20px;
 }
 
 .project-description {
     font-size: 16px;
-    color: #666;
+    color: black;
     margin-bottom: 30px;
+    font-family: "Dancing Script", cursive;;
 }
 
-.btn {
+.btn-btn-primary {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #007bff;
+    background-color: #dc373f;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 7px;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.btn-btn-primary:hover {
+    background-color: #0f7a1d;
 }
 
 .project-image {
@@ -369,6 +379,7 @@ main {
     object-fit: cover;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
 
 
