@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="resume-builder">
+        <header>
+            <h1>Interactive Resume Builder</h1>
+        </header>
+        <main>
+            <div id="form-container">
+                <!-- Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="#" data-form="personal-info-form">Personal Info</a></li>
+                        <li><a href="#" data-form="work-experience-form">Work Experience</a></li>
+                        <li><a href="#" data-form="education-form">Education</a></li>
+                        <li><a href="#" data-form="skills-form">Skills</a></li>
+                        <li><a href="#" data-form="projects-form">Projects</a></li>
+                    </ul>
+                </nav>
+                <!-- Forms -->
+                <form id="personal-info-form" class="form-section">
+                    <h2>Personal Information</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                    
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
+
+                    <label for="photo">Profile Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                    
+                    
+                    <button type="submit">Next</button>
+                </form>
+                
+                <form id="work-experience-form" class="form-section">
+                    <h2>Work Experience</h2>
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="job-title" name="job-title" required>
+                    
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" required>
+                    
+                    <label for="work-dates">Dates of Employment:</label>
+                    <input type="text" id="work-dates" name="work-dates" required>
+                    
+                    <label for="job-description">Job Description:</label>
+                    <textarea id="job-description" name="job-description" rows="4"></textarea>
+                    
+                    <button type="submit">Next</button>
+                </form>
+                
+                <form id="education-form" class="form-section">
+                    <h2>Education</h2>
+                    <label for="school">School:</label>
+                    <input type="text" id="school" name="school" required>
+                    
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" name="degree" required>
+                    
+                    <label for="graduation-dates">Graduation Dates:</label>
+                    <input type="text" id="graduation-dates" name="graduation-dates" required>
+                    
+                    <label for="achievements">Achievements:</label>
+                    <textarea id="achievements" name="achievements" rows="4"></textarea>
+                    
+                    <button type="submit">Next</button>
+                </form>
+                
+                <form id="skills-form" class="form-section">
+                    <h2>Skills</h2>
+                    <label for="skills">Skills:</label>
+                    <textarea id="skills" name="skills" rows="5" required></textarea>
+                    
+                    <button type="submit">Next</button>
+                </form>
+                
+                <form id="projects-form" class="form-section">
+                    <h2>Projects</h2>
+                    <label for="project-title">Project Title:</label>
+                    <input type="text" id="project-title" name="project-title" required>
+                    
+                    <label for="project-description">Project Description:</label>
+                    <textarea id="project-description" name="project-description" rows="4"></textarea>
+                    
+                    <button type="submit">Finish</button>
+                </form>
+            </div>
+            <div id="preview-container">
+                <h2>Resume Preview</h2>
+                <!-- Live preview of the resume will be shown here -->
+            </div>
+        </main>
+        <button id="export-pdf-button" style="display:none;">Export as PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
