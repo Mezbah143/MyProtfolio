@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Virtual Art Gallery</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h2>Welcome to the Virtual Art Gallery</h2>
+                <p>Explore the beauty of digital art from the comfort of your home.</p>
+            </div>
+        </section>
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="controls">
+                    <input type="text" id="search" placeholder="Search by name or artist">
+                    <select id="filter">
+                        <option value="all">All</option>
+                        <option value="modern">Modern</option>
+                        <option value="classic">Classic</option>
+                        <!-- Add more categories as needed -->
+                    </select>
+                </div>
+                <div class="gallery-grid">
+                    <!-- Art pieces will be inserted here dynamically -->
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We are dedicated to bringing the finest digital art to a global audience.</p>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Virtual Art Gallery. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="#">Facebook</a>, 
+                <a href="#">Twitter</a>, 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </footer>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
