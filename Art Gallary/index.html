@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Art Gallery</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
     <header>
@@ -42,6 +42,23 @@
                 </div>
                 <div class="gallery-grid">
                     <!-- Art pieces will be inserted here dynamically -->
+
+                    
+                </div>
+                <div class="upload-section">
+                    <h3>Upload Your Art</h3>
+                    <form id="upload-form">
+                        <input type="file" id="upload-image" required>
+                        <input type="text" id="upload-caption" placeholder="Caption" required>
+                        <input type="text" id="upload-artist" placeholder="Artist" required>
+                        <select id="upload-category">
+                            <option value="modern">Modern</option>
+                            <option value="classic">Classic</option>
+                            <option value="abstract">Abstract</option>
+                            <!-- Add more categories as needed -->
+                        </select>
+                        <button type="submit">Upload</button>
+                    </form>
                 </div>
             </div>
         </section>

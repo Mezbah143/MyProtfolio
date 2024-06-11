@@ -120,6 +120,45 @@ nav ul li a:hover {
     height: auto;
 }
 
+.upload-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e82424;
+    border-radius: 8px;
+}
+
+.upload-section h3 {
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.upload-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-section input,
+.upload-section select,
+.upload-section button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ede9e9;
+    border-radius: 4px;
+}
+
+.upload-section button {
+    background: #11da40;
+    color: #111010;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.upload-section button:hover {
+    background: #626558;
+}
+
+
 /* About Section */
 .about-section {
     background-color: #ff7e5f;
