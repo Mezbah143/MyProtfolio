@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = [
         { src: 'images/art1.jpg', caption: 'Artwork 1', artist: 'Artist A', category: 'modern' },
         { src: 'images/art2.jpg', caption: 'Artwork 2', artist: 'Artist B', category: 'classic' },
+        { src: 'images/art3.jpg', caption: 'Artwork 3', artist: 'Artist C', category: 'abstract' },
         // Add more images with artist and category
+        { src: 'images/art4.jpg', caption: 'Artwork 4', artist: 'Artist D', category: 'modern' },
+        { src: 'images/art5.jpg', caption: 'Artwork 5', artist: 'Artist E', category: 'classic' }
     ];
 
     function displayImages(filteredImages) {
