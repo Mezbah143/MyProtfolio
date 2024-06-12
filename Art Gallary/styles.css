@@ -302,3 +302,46 @@ footer a:hover {
         transform: translateY(0);
     }
 }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .search-filter input, .search-filter select {
+        width: 48%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-filter {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-filter input, .search-filter select {
+        width: 100%;
+    }
+
+    .upload-form input, .upload-form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .search-filter input, .search-filter select {
+        font-size: 12px;
+    }
+
+    .upload-form input, .upload-form button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

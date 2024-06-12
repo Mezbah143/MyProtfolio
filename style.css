@@ -421,27 +421,82 @@ footer {
 .designer{
     color: rgb(238, 250, 12);
 }
-@media (max-width: 768px) {
+
+
+/* Media Queries */
+
+/* Mobile Styles (up to 576px) */
+@media (max-width: 576px) {
     .container {
-        padding: 0 10px;
+        padding: 15px;
     }
 
-    .navbar-list {
-        display: none;
+    h1, h2 {
+        font-size: 24px;
     }
 
-    .navbar-list.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 10px 0;
-        text-align: center;
+    .form-group label, .form-group input, button {
+        font-size: 14px;
     }
 
-    .navbar-list.active a {
-        margin: 10px 0;
+    #user-info p {
+        font-size: 16px;
     }
 }
 
+/* Tablet Styles (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 28px;
+    }
+
+    .form-group label, .form-group input, button {
+        font-size: 16px;
+    }
+
+    #user-info p {
+        font-size: 18px;
+    }
+}
+
+/* Small Desktop Styles (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1, h2 {
+        font-size: 32px;
+    }
+
+    .form-group label, .form-group input, button {
+        font-size: 18px;
+    }
+
+    #user-info p {
+        font-size: 20px;
+    }
+}
+
+/* Large Desktop Styles (993px and up) */
+@media (min-width: 993px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1, h2 {
+        font-size: 36px;
+    }
+
+    .form-group label, .form-group input, button {
+        font-size: 20px;
+    }
+
+    #user-info p {
+        font-size: 22px;
+    }
+}
