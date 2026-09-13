@@ -1,66 +1,41 @@
-// script.js
+const header = document.querySelector("[data-header]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navLinks = document.querySelector("[data-nav-links]");
+const navItems = [...document.querySelectorAll(".nav-links a")];
+const sections = navItems
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
 
-// Smooth scrolling for anchor links
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
-anchorLinks.forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+});
 
-        const target = document.querySelector(this.getAttribute('href'));
-        const offset = 80; // Adjust this value according to your navbar height
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-        const startPosition = window.pageYOffset;
-        const distance = targetPosition - startPosition - offset;
-        const duration = 1000;
-        let startTime = null;
-
-        function scrollAnimation(currentTime) {
-            if (startTime === null) startTime = currentTime;
-            const timeElapsed = currentTime - startTime;
-            const scrollAmount = ease(timeElapsed, startPosition, distance, duration);
-            window.scrollTo(0, scrollAmount);
-            if (timeElapsed < duration) requestAnimationFrame(scrollAnimation);
-        }
-
-        function ease(t, b, c, d) {
-            t /= d / 2;
-            if (t < 1) return c / 2 * t * t + b;
-            t--;
-            return -c / 2 * (t * (t - 2) - 1) + b;
-        }
-
-        requestAnimationFrame(scrollAnimation);
+navItems.forEach((link) => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
     });
 });
 
-// Toggle navbar collapse on click
-const navbarList = document.querySelector('.navbar-list');
-const navbarCollapse = document.getElementById('navbarCollapse');
-navbarList.addEventListener('click', function() {
-    navbarCollapse.classList.toggle('show');
-});
+const setActiveLink = () => {
+    const headerOffset = header.offsetHeight + 24;
+    let activeId = sections[0]?.id;
 
-// Toggle active class for navbar items on scroll
-window.addEventListener('scroll', function() {
-    const scrollDistance = window.scrollY;
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionId = section.getAttribute('id');
-        const sectionOffset = section.offsetTop - 80; // Adjust this value according to your navbar height
-        if (sectionOffset <= scrollDistance) {
-            const activeLink = document.querySelector(`.navbar-list a[href="#${sectionId}"]`);
-            document.querySelectorAll('.navbar-list a').forEach(a => {
-                a.classList.remove('active');
-            });
-            activeLink.classList.add('active');
+    sections.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - headerOffset) {
+            activeId = section.id;
         }
     });
-});
 
-// Close navbar collapse menu when clicking outside
-window.addEventListener('click', function(e) {
-    if (!e.target.closest('.navbar-list')) {
-        navbarCollapse.classList.remove('show');
-    }
-});
+    navItems.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+    });
+};
+
+setActiveLink();
+window.addEventListener("scroll", setActiveLink, { passive: true });
