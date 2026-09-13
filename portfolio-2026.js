@@ -45,3 +45,25 @@ const setActiveLink = () => {
 
 setActiveLink();
 window.addEventListener("scroll", setActiveLink, { passive: true });
+
+const revealCards = [...document.querySelectorAll(".project-card")];
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (reducedMotion || !("IntersectionObserver" in window)) {
+    revealCards.forEach((card) => card.classList.add("is-visible"));
+} else {
+    revealCards.forEach((card, index) => {
+        card.classList.add("is-reveal");
+        card.style.transitionDelay = `${Math.min(index * 90, 180)}ms`;
+    });
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.14 });
+
+    revealCards.forEach((card) => revealObserver.observe(card));
+}
