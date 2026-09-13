@@ -6,7 +6,13 @@ const sections = navItems
     .map((link) => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
 
-navToggle.addEventListener("click", () => {
+const closeMenu = () => {
+    navLinks?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    if (navToggle) navToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+};
+
+navToggle?.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.innerHTML = isOpen
@@ -15,15 +21,15 @@ navToggle.addEventListener("click", () => {
 });
 
 navItems.forEach((link) => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
-        navToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
-    });
+    link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
 });
 
 const setActiveLink = () => {
-    const headerOffset = header.offsetHeight + 24;
+    const headerOffset = (header?.offsetHeight || 0) + 24;
     let activeId = sections[0]?.id;
 
     sections.forEach((section) => {

@@ -1,27 +1,33 @@
-# My Portfolio
+# Mezbah Uddin Portfolio
 
-Personal portfolio website for Mezbah Uddin, published with GitHub Pages.
+A recruiter-focused portfolio for Mezbah Uddin, a junior full-stack developer and IT student based in Ulsan, South Korea.
 
-## Live Site
+## Highlights
 
-<https://mezbah143.github.io/MyProtfolio/>
+- Responsive technical portfolio homepage
+- Case studies for three full-stack projects
+- Printable resume page with PDF export through the browser
+- Accessible mobile navigation with active-section highlighting
+- Separate section for older experiments and demos
 
 ## Featured Projects
 
-- **StudentBridge**: Capstone job platform for international students in South Korea, built with static frontend pages, Java Servlets, MySQL, and Render deployment.
-- **Interactive Resume Builder**: Static web app for building a resume from user-entered information.
-- **Movie Recommendation App**: Simple movie discovery interface.
-- **Virtual Art Gallery**: Gallery-style web page for browsing artwork.
+- Hotel Booking System
+- StudentBridge
+- AI Study & Job Assistant
+
+## Local preview
+
+Open `index.html` in a browser or serve this directory with a static web server. The AI Study & Job Assistant runs separately from its own FastAPI directory; see its README for setup.
 
 ## Tech Stack
 
 - HTML
 - CSS
 - JavaScript
-- GitHub Pages
+- Font Awesome icons
 
-## Maintenance Notes
+## Contact
 
-- Keep the repository name `MyProtfolio` unless the GitHub Pages URL is also updated.
-- GitHub Pages is static, so contact actions should use email links or another static-site-safe service instead of PHP.
-- Add new projects to the Projects section in `index.html` and include verified live/demo links before publishing.
+- Email: mejbahuddin664094@gmail.com
+- GitHub: [Mezbah143](https://github.com/Mezbah143)

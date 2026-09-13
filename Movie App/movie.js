@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiKey = '600ee9e333289038c1e92065fba00427';
+    // Keep the TMDB key out of the repository. A production version should use a server-side proxy.
+    const apiKey = window.MOVIE_DB_API_KEY || '';
     const moviesContainer = document.getElementById('movies');
+
+    if (!apiKey && moviesContainer) {
+        moviesContainer.innerHTML = '<div class="col-12"><p class="alert alert-info">The movie demo is paused while its API access is moved behind a protected backend.</p></div>';
+    }
 
     function searchMovies() {
         const genre = document.getElementById('genre').value;
@@ -129,12 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    document.getElementById('add-to-favorites').addEventListener('click', (event) => {
+    document.getElementById('add-to-favorites')?.addEventListener('click', (event) => {
         const movieId = event.target.getAttribute('data-id');
         addToFavorites(movieId);
     });
 
-    document.getElementById('add-to-watchlist').addEventListener('click', (event) => {
+    document.getElementById('add-to-watchlist')?.addEventListener('click', (event) => {
         const movieId = event.target.getAttribute('data-id');
         addToWatchlist(movieId);
     });

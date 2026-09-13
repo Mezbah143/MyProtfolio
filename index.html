@@ -1,146 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mezbah Uddin is a junior full-stack developer building practical web applications with Java, Spring Boot, SQL, Python, and FastAPI.">
+    <meta name="theme-color" content="#101820">
+    <meta property="og:title" content="Mezbah Uddin | Junior Full-Stack Developer">
+    <meta property="og:description" content="Java, Spring Boot, SQL, Python, and FastAPI projects built for real users and real workflows.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mezbah143.github.io/MyProtfolio/">
+    <title>Mezbah Uddin | Junior Full-Stack Developer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="portfolio-2026.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <a href="index.html" class="main-page" aria-label="My Portfolio home">
-                <span class="logo"><span class="text-primary">My</span> Portfolio</span>
-            </a>
-            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarCollapse">
-                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-            </button>
-            <div class="navbar-list" id="navbarCollapse">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#project">Projects</a>
-                <a href="#contact">Contact</a>
+    <header class="site-header" data-header>
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="#home" aria-label="Mezbah Uddin home"><span class="brand-mark">MU</span><span>Mezbah Uddin</span></a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-links" data-nav-toggle><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+            <div class="nav-links" id="primary-links" data-nav-links>
+                <a href="#work">Work</a><a href="#about">About</a><a href="#skills">Stack</a><a href="#contact">Contact</a>
+                <a class="nav-resume" href="resume.html">Resume <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
-            <div class="container hero-layout">
-                <div class="home-text">
-                    <p class="intro-label">Hello, I'm</p>
-                    <h1>Mezbah Uddin</h1>
-                    <h2>An IT student from Bangladesh studying at Ulsan College.</h2>
-                    <p>My journey in IT is about more than mastering technology. I want to build useful, meaningful projects that solve real problems and help people work, learn, and connect more easily.</p>
-                    <a class="btn primary" href="#contact">Contact Me</a>
+        <section class="hero section" id="home">
+            <div class="hero-content">
+                <p class="eyebrow"><span class="status-dot"></span> Open to software internships · Ulsan, South Korea</p>
+                <h1>Junior full-stack developer building useful software.</h1>
+                <p class="hero-copy">I’m Mezbah Uddin, an IT student who connects reliable backend logic with interfaces people can understand. My current focus is Java, Spring Boot, SQL, Python, and practical AI applications.</p>
+                <div class="hero-actions" aria-label="Portfolio actions">
+                    <a class="btn primary" href="#work">Explore my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                    <a class="btn secondary" href="resume.html">View resume <i class="fa-solid fa-file-lines" aria-hidden="true"></i></a>
                 </div>
-                <div class="hero-image">
-                    <img class="img" src="./protfolio.png" alt="Mezbah Uddin portrait">
-                </div>
+                <div class="hero-proof" aria-label="Technical focus"><span>Java / Spring Boot</span><span>Python / FastAPI</span><span>SQL / REST APIs</span></div>
             </div>
+            <div class="hero-media" aria-label="Profile image"><div class="hero-grid-lines" aria-hidden="true"></div><img src="protfolio.png" alt="Portrait of Mezbah Uddin"><div class="hero-caption"><span>Currently building</span><strong>AI Study &amp; Job Assistant</strong></div></div>
         </section>
 
-        <section id="about" class="content-section">
-            <div class="container">
-                <h2 class="section-heading">About</h2>
-                <div class="about-layout">
-                    <img class="img-about" src="about.jpg" alt="About Mezbah">
-                    <div class="about-text">
-                        <h3>Designer & Web Developer</h3>
-                        <p>Hello, I'm an enthusiastic explorer of the digital world from Bangladesh. I enjoy web design, programming, and practical problem-solving. I approach each project with curiosity, persistence, and a goal of creating clean user experiences that make technology easier to use.</p>
-                    </div>
-                </div>
+        <section class="section about-grid" id="about"><div><p class="eyebrow">01 / About</p><h2>From classroom problems to working products.</h2></div><div class="about-copy"><p>I learn by building end-to-end: modeling data, designing APIs, connecting a database, and making the final workflow feel simple for the person using it.</p><p>As an international IT student at Ulsan College, I’m looking for an internship where I can contribute to backend or full-stack work, learn from an experienced team, and ship improvements that matter.</p><div class="info-list"><span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Ulsan College IT student</span><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Ulsan, South Korea</span><span><i class="fa-solid fa-language" aria-hidden="true"></i> English / Bengali</span></div></div></section>
 
-                <div class="information">
-                    <div><strong>Name:</strong> <span class="text-secondary">Mezbah Uddin</span></div>
-                    <div><strong>Birthday:</strong> <span class="text-secondary">10 December 1999</span></div>
-                    <div><strong>Degree:</strong> <span class="text-secondary">Associate Degree</span></div>
-                    <div><strong>Experience:</strong> <span class="text-secondary">Student projects and capstone work</span></div>
-                    <div><strong>Phone:</strong> <span class="text-secondary">+010</span></div>
-                    <div><strong>Email:</strong> <span class="text-secondary">mejbahuddin664094@gmail.com</span></div>
-                    <div><strong>Address:</strong> <span class="text-secondary">Nam-gu, Ulsan, South Korea</span></div>
-                    <div><strong>Freelance:</strong> <span class="text-secondary">Available</span></div>
-                </div>
+        <section class="section work-section" id="work"><div class="section-heading"><div><p class="eyebrow">02 / Selected work</p><h2>Three projects, three ways I solve problems.</h2></div><p class="section-note">I care about the whole path from a user’s first click to the data stored behind it.</p></div><div class="project-grid">
+            <article class="project-card featured project-spring"><div class="project-image-wrap"><img src="project-1.jpg" alt="Hotel Booking System interface preview" loading="lazy"></div><div class="project-card-body"><div class="project-meta"><span class="project-number">01</span><span class="project-tag">Java · Spring Boot</span></div><h3>Hotel Booking System</h3><p class="project-lede">A database-backed booking platform with authentication, room search, reservations, admin workflows, and persistent image uploads.</p><div class="project-points"><span>Role-based access</span><span>MySQL + JPA</span><span>Render-ready</span></div><div class="project-links"><a href="projects/hotel-booking.html">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a href="https://github.com/Mezbah143/hotel-booking-system" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
+            <article class="project-card project-student"><div class="project-image-wrap"><img src="about.jpg" alt="StudentBridge project preview" loading="lazy"></div><div class="project-card-body"><div class="project-meta"><span class="project-number">02</span><span class="project-tag">Capstone · Full stack</span></div><h3>StudentBridge</h3><p class="project-lede">A part-time job platform designed to help international students find opportunities with clearer profiles, search, and location-aware workflows.</p><div class="project-points"><span>Team capstone</span><span>Kakao Maps</span><span>Live deployment</span></div><div class="project-links"><a href="projects/studentbridge.html">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a href="https://studentbridge-6jn2.onrender.com/" target="_blank" rel="noopener">Live demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/Mezbah143/StudentBridge" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
+            <article class="project-card project-ai"><div class="project-image-wrap app-preview"><div class="terminal-window"><span class="terminal-bar"><i></i><i></i><i></i></span><code>POST /api/compare<br><b>{ match_score: 78, ... }</b></code></div></div><div class="project-card-body"><div class="project-meta"><span class="project-number">03</span><span class="project-tag">Python · FastAPI</span></div><h3>AI Study &amp; Job Assistant</h3><p class="project-lede">A practical AI-style app for summaries, skill extraction, resume matching, source-grounded answers, study plans, and saved history.</p><div class="project-points"><span>Six API workflows</span><span>SQLite history</span><span>Pytest coverage</span></div><div class="project-links"><a href="projects/ai-study-job-assistant.html">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><span class="project-pending">Local demo · source publication next</span></div></div></article>
+        </div><div class="experiments"><p class="eyebrow">Other experiments</p><div><a href="Movie%20App/movie.html">Movie recommendation app</a><a href="CV/index.html">Interactive resume builder</a><a href="Art%20Gallary/index.html">Virtual art gallery</a></div></div></section>
 
-                <div class="about-actions">
-                    <a href="#contact" class="btn primary">Hire Me</a>
-                    <a href="#project" class="btn secondary">View Projects</a>
-                </div>
-            </div>
-        </section>
+        <section class="section skills-section" id="skills"><div class="section-heading"><div><p class="eyebrow">03 / Stack</p><h2>Tools I use to turn ideas into software.</h2></div></div><div class="skill-grid"><div class="skill-card"><span class="skill-index">A</span><h3>Backend</h3><p>Java, Spring Boot, FastAPI, REST APIs, validation, authentication, and CRUD workflows.</p></div><div class="skill-card"><span class="skill-index">B</span><h3>Data</h3><p>MySQL, SQLite, PostgreSQL basics, JPA, schema planning, and database-backed features.</p></div><div class="skill-card"><span class="skill-index">C</span><h3>Frontend</h3><p>Semantic HTML, modern CSS, JavaScript, responsive layouts, and accessible interactions.</p></div><div class="skill-card"><span class="skill-index">D</span><h3>Delivery</h3><p>GitHub, Maven, Pytest, debugging, deployment configuration, documentation, and iteration.</p></div></div></section>
 
-        <section id="project" class="projects-section">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-
-                <article class="project featured-project">
-                    <div class="project-info">
-                        <p class="project-label">Latest project</p>
-                        <h3 class="project-title">StudentBridge</h3>
-                        <p class="project-description">StudentBridge is a university capstone job platform for international students in South Korea. It includes student job search, employer job posting, login and registration flows, Java Servlets, MySQL, and a Render deployment.</p>
-                        <div class="project-actions">
-                            <a href="https://studentbridge-6jn2.onrender.com" class="btn-btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="https://github.com/Mezbah143/StudentBridge" class="btn-btn-primary outline" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                    <img src="./project-1.jpg" alt="StudentBridge project preview" class="project-image">
-                </article>
-
-                <article class="project">
-                    <div class="project-info">
-                        <h3 class="project-title">Interactive Resume Builder</h3>
-                        <p class="project-description">A user-friendly tool designed to help job seekers create professional resumes. Users enter personal information, education, work experience, and skills, then generate a clean resume quickly.</p>
-                        <a href="./CV/index.html" class="btn-btn-primary">Create Your Resume</a>
-                    </div>
-                    <img src="resume.jpg" alt="Resume builder project preview" class="project-image">
-                </article>
-
-                <article class="project">
-                    <div class="project-info">
-                        <h3 class="project-title">Movie Recommendation App</h3>
-                        <p class="project-description">A personal movie guide for discovering films by taste and mood. It helps users explore genres and find new movies to watch through a simple web interface.</p>
-                        <a href="./Movie App/movie.html" class="btn-btn-primary">Watch Movies</a>
-                    </div>
-                    <img src="./movie.png" alt="Movie recommendation app preview" class="project-image">
-                </article>
-
-                <article class="project">
-                    <div class="project-info">
-                        <h3 class="project-title">Virtual Art Gallery</h3>
-                        <p class="project-description">A virtual gallery for exploring artwork in a simple online space. It showcases paintings, digital art, and gallery-style browsing for art lovers.</p>
-                        <a href="./Art Gallary/index.html" class="btn-btn-primary">View Gallery</a>
-                    </div>
-                    <img src="./art.jpg" alt="Virtual art gallery preview" class="project-image">
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container contact-layout">
-                <div>
-                    <h2 class="contact-header">Get in Touch</h2>
-                    <p class="contact-copy">GitHub Pages does not run PHP forms, so the best way to contact me from this static portfolio is email.</p>
-                    <a class="btn primary" href="mailto:mejbahuddin664094@gmail.com?subject=Portfolio%20Contact">Send Email</a>
-                </div>
-                <div id="contact-info">
-                    <h3>Contact Information</h3>
-                    <p><strong>Email:</strong> <a href="mailto:mejbahuddin664094@gmail.com">mejbahuddin664094@gmail.com</a></p>
-                    <p><strong>Phone:</strong> +8801863664093</p>
-                    <p><strong>Address:</strong> Nam-gu, Ulsan, South Korea</p>
-                </div>
-            </div>
-        </section>
+        <section class="section contact-section" id="contact"><div><p class="eyebrow">04 / Contact</p><h2>Have a problem worth building?</h2><p>I’m open to software internships, backend work, and collaborative projects where I can learn quickly and contribute consistently.</p><div class="contact-actions"><a class="btn primary" href="mailto:mejbahuddin664094@gmail.com">Send me an email <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="text-link" href="https://github.com/Mezbah143" target="_blank" rel="noopener">View GitHub profile <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div><div class="contact-card"><span class="contact-label">Based in</span><strong>Nam-gu, Ulsan<br>South Korea</strong><span class="contact-label">Email</span><a href="mailto:mejbahuddin664094@gmail.com">mejbahuddin664094@gmail.com</a><span class="contact-label">Status</span><strong class="available"><span class="status-dot"></span> Available for internships</strong></div></section>
     </main>
-
-    <footer>
-        <div class="socialIcons">
-            <a href="https://github.com/Mezbah143" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            <a href="mailto:mejbahuddin664094@gmail.com" aria-label="Email Mezbah"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-        </div>
-        <p>Copyright &copy;2026; Designed by <span class="designer">Mezbah</span></p>
-    </footer>
-
-    <script src="script.js"></script>
+    <footer class="site-footer"><p>© 2026 Mezbah Uddin · Built with HTML, CSS, and JavaScript.</p><div><a href="resume.html">Resume</a><a href="#home" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a></div></footer>
+    <script src="portfolio-2026.js"></script>
 </body>
 </html>

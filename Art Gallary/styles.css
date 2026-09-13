@@ -101,6 +101,18 @@ nav ul li a:hover {
 }
 
 .art-piece {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.art-piece img {
+    width: 100%;
+    display: block;
+}
+
+.art-piece {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
