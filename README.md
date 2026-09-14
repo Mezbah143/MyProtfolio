@@ -14,8 +14,8 @@ A recruiter-focused portfolio for Mezbah Uddin, a junior full-stack developer an
 
 ## Featured Projects
 
-- Hotel Booking System
 - StudentBridge
+- Hotel Booking System
 - AI Study & Job Assistant
 
 ## Local preview
